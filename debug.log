@@ -1,0 +1,4 @@
+[0429/231817.516:ERROR:file_io.cc(89)] ReadExactly: expected 560, observed 0
+[0429/231817.518:ERROR:crash_report_database_win.cc(444)] failed to read records
+[0429/231858.314:ERROR:file_io.cc(89)] ReadExactly: expected 560, observed 0
+[0429/231858.314:ERROR:crash_report_database_win.cc(444)] failed to read records
