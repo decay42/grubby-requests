@@ -9,24 +9,25 @@ export default new Vuex.Store({
     id: 0
   },
   getters: {
-    requests: state => [{
-      'id': 1,
-      'requester': 'kwilson0',
-      'request': 'convallis morbi odio odio '
-    }, {
-      'id': 2,
-      'requester': 'rghiotto1',
-      'request': 'ipsum primis in faucibus orci luctus'
-    }, {
-      'id': 3,
-      'requester': 'cgoodboddy2',
-      'request': 'primis in faucibus dapibus dolor vel est donec odio justo sollicitudin ut'
-    }, {
-      'id': 4,
-      'requester': 'djendrach3',
-      'request': 'rutrum nulla tellus'
-    }] // state.requests
+    requests: state => state.requests
     // dummy data in case it's needed
+    // [{
+    //   'id': 1,
+    //   'requester': 'kwilson0',
+    //   'request': 'convallis morbi odio odio '
+    // }, {
+    //   'id': 2,
+    //   'requester': 'rghiotto1',
+    //   'request': 'ipsum primis in faucibus orci luctus'
+    // }, {
+    //   'id': 3,
+    //   'requester': 'cgoodboddy2',
+    //   'request': 'primis in faucibus dapibus dolor vel est donec odio justo sollicitudin ut'
+    // }, {
+    //   'id': 4,
+    //   'requester': 'djendrach3',
+    //   'request': 'rutrum nulla tellus'
+    // }]
   },
   mutations: {
     addRequest (state, request) {
