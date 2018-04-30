@@ -10,7 +10,7 @@
         Currently no requests
       </li>
     </ul>
-    <p>Next Requests:</p>
+    <p>Upcoming Requests:</p>
     <ul class="pl-2">
       <div v-if="requests[1]">
         <li
