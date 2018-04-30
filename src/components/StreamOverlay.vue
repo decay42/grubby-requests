@@ -1,6 +1,6 @@
 <template>
-  <div class="chroma">
-    <p>Current Request:</p>
+  <div class="chroma p-2">
+    <p class="mb-1">Current Request:</p>
     <ul class="pl-2">
       <li 
          v-if="requests[0]">
@@ -10,7 +10,7 @@
         Currently no requests
       </li>
     </ul>
-    <p>Upcoming Requests:</p>
+    <p class="mb-1">Upcoming Requests:</p>
     <ul class="pl-2">
       <div v-if="requests[1]">
         <li
@@ -40,28 +40,25 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .chroma {
-    background-color: #00b140;
-    color: #FDD017;
-    font-weight: bold;
-    text-shadow: #000 0 0 1px, #000 0 0 1px, #000 0 0 1px, #000 0 0 1px, #000 0 0 1px;
-    -webkit-font-smoothing: antialiased;
+.chroma {
+  background-color: #00b140;
+  color: #FDD017;
+  font-weight: bold;
+  text-shadow: #000 0 0 1px, #000 0 0 1px, #000 0 0 1px, #000 0 0 1px, #000 0 0 1px;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  list-style-type: none;
+
+  li {
+    text-indent: -0.9rem;
+    padding-left: 0.9rem;
+    font-size: 90%;
   }
 
-  ul {
-    list-style-type: none;
-
-    li {
-      text-indent: -0.9rem;
-      padding-left: 0.9rem;
-    }
-
-    li:not(:last-child) {
-      margin-bottom: 0.5rem;
-    }
+  li:not(:last-child) {
+    margin-bottom: 0.5rem;
   }
-
-  p {
-    font-size: 110%;
-  }
+}
 </style>
