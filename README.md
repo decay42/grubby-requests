@@ -1,3 +1,3 @@
 # grubby-requests
 
-![Example](https://i.imgur.com/fdTo2nl.png)
+![Example](https://i.imgur.com/Gkh8hnT.png)
