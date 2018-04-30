@@ -15,16 +15,18 @@
            v-model="request"
            :rows="2" />
       </b-form-group>
-      <b-btn
-         variant="primary"
-         type="submit">
-        Add Request
-      </b-btn>
-      <b-btn
-         variant="success"
-         @click="nextRequest">
-        Next Request
-      </b-btn>
+      <div class="text-nowrap">
+        <b-btn
+          variant="primary"
+          type="submit">
+          Add Request
+        </b-btn>
+        <b-btn
+          variant="success"
+          @click="nextRequest">
+          Next Request
+        </b-btn>
+      </div>
     </b-form>
   </div>
 </template>

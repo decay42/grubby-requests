@@ -1,5 +1,5 @@
 <template>
-  <div class="row p-2">
+  <div class="col-lg-6 col-md-12 row p-2 m-auto">
     <StreamOverlay class="resize" />
     <Interface class="col-md-6" />
   </div>
@@ -28,6 +28,6 @@ export default {
   resize: both;
   overflow: auto;
   padding: 1rem;
-  width: 50%;
+  width: 210px;
 }
 </style>
