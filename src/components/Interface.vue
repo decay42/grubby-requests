@@ -10,6 +10,7 @@
       <b-form-group
          label="Request Text:">
         <b-form-textarea
+           required
            placeholder="Request"
            v-model="request"
            :rows="2" />
@@ -35,8 +36,8 @@ export default {
   name: 'Interface',
   data () {
     return {
-      request: '',
-      requester: ''
+      request: null,
+      requester: null
     }
   },
   methods: {
@@ -50,6 +51,8 @@ export default {
         request: this.request,
         requester: this.requester
       })
+      this.request = null
+      this.requester = null
     }
   }
 }
