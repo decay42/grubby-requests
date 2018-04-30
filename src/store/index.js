@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    requests: [],
+    requests: JSON.parse(localStorage.getItem('requestQueue')) || [],
     id: 0
   },
   getters: {
