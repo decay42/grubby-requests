@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "7"
+install:
+  - yarn
+script:
+  - yarn build
+after_success:
+  - surge --project ./dist --domain grubby-requests.surge.sh
