@@ -33,10 +33,10 @@
         </b-btn>
 
         <b-btn
-           variant="warning"
-           @click="saveRequests"
-           title="Save the current request queue in the browser's localStorage, to have them available even after closing this window">
-          <icon name="save"></icon>Save requests
+           variant="danger"
+           @click="resetRequests"
+           title="Reset the request queue, clearing all current requests and everythign stored in localStorage">
+          <icon name="sync-alt"></icon>Reset
         </b-btn>
       </div>
     </b-form>
@@ -50,7 +50,7 @@ import Icon from 'vue-awesome/components/Icon'
 
 import 'vue-awesome/icons/plus'
 import 'vue-awesome/icons/step-forward'
-import 'vue-awesome/icons/save'
+import 'vue-awesome/icons/sync-alt'
 
 export default {
   name: 'Interface',
@@ -83,8 +83,12 @@ export default {
       this.requester = null
     },
 
-    saveRequests () {
-      localStorage.setItem('requestQueue', JSON.stringify(this.requests))
+    resetRequests () {
+      if (confirm('Are you sure you want to clear all requests currently in the queue?')) {
+        while (this.requests.length) {
+          this.nextRequest()
+        }
+      }
     }
   }
 }
