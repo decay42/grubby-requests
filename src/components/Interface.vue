@@ -22,21 +22,21 @@
           variant="primary"
           type="submit"
           title="Add a request to the request queue">
-          Add Request
+          <icon name="plus"></icon>Add Request
         </b-btn>
 
         <b-btn
           variant="success"
           @click="nextRequest"
           title="Drop the current request and move the first upcoming request up into Current Request">
-          Next Request
+          <icon name="step-forward"></icon>Next Request
         </b-btn>
 
         <b-btn
            variant="warning"
            @click="saveRequests"
            title="Save the current request queue in the browser's localStorage, to have them available even after closing this window">
-          Save requests
+          <icon name="save"></icon>Save requests
         </b-btn>
       </div>
     </b-form>
@@ -46,8 +46,17 @@
 <script>
 import { mapMutations, mapGetters } from 'vuex'
 
+import Icon from 'vue-awesome/components/Icon'
+
+import 'vue-awesome/icons/plus'
+import 'vue-awesome/icons/step-forward'
+import 'vue-awesome/icons/save'
+
 export default {
   name: 'Interface',
+  components: {
+    Icon
+  },
   data () {
     return {
       request: null,

@@ -17,4 +17,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+.btn .fa-icon {
+  vertical-align: middle;
+  margin-top: -0.17rem;
+  margin-right: 0.4rem !important;
+}
+.btn .fa-icon:last-child {
+  margin-right: 0;
+}
 </style>
