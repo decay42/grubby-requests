@@ -1,6 +1,6 @@
 <template>
   <div class="row p-2">
-    <StreamOverlay class="col-md-6" />
+    <StreamOverlay class="resize" />
     <Interface class="col-md-6" />
   </div>
 </template>
@@ -24,4 +24,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.resize {
+  resize: both;
+  overflow: auto;
+  padding: 1rem;
+  width: 50%;
+}
 </style>
