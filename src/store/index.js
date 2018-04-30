@@ -17,8 +17,8 @@ export default new Vuex.Store({
       state.id++
       state.requests.push(request)
     },
-    removeRequest (state, id) {
-      state.requests = state.requests.filter(e => e.id !== id)
+    nextRequest (state) {
+      state.requests = state.requests.length > 1 ? state.requests.slice(1) : []
     }
   }
 })

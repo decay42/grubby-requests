@@ -19,6 +19,11 @@
          type="submit">
         Add Request
       </b-btn>
+      <b-btn
+         variant="success"
+         @click="nextRequest">
+        Next Request
+      </b-btn>
     </b-form>
   </div>
 </template>
@@ -36,7 +41,8 @@ export default {
   },
   methods: {
     ...mapMutations([
-      'addRequest'
+      'addRequest',
+      'nextRequest'
     ]),
 
     _addRequest () {
