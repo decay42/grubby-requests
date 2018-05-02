@@ -1,15 +1,13 @@
 <template>
   <div>
     <b-form @submit.prevent="_addRequest">
-      <b-form-group
-         label="Requester Name:">
+      <b-form-group label="Requester Name:">
         <b-input
            placeholder="Requester"
            v-model="requester" />
       </b-form-group>
 
-      <b-form-group
-         label="Request Text:">
+      <b-form-group label="Request Text:">
         <b-form-textarea
            required
            placeholder="Request"
