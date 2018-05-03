@@ -54,10 +54,6 @@ export default {
     Interface,
     StreamOverlay,
     Icon
-  },
-  data () {
-    return {
-    }
   }
 }
 </script>
