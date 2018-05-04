@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="row justify-content-center">
-      <StreamOverlay class="resizable w-210"/>
+      <StreamOverlay/>
       <Interface class="col-md-6"/>
-      <Footer/>
     </div>
+    <Footer/>
   </div>
 </template>
 
@@ -25,14 +25,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.resizable {
-  resize: both;
-  overflow: auto;
-  padding: 1rem;
-}
 
-.w-210 {
-  width: 210px;
-  min-width: 176px;
-}
 </style>

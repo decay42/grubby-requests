@@ -1,5 +1,5 @@
 <template>
-  <div class="chroma p-2">
+  <div class="chroma p-2 w-210 resizable">
     <p class="mb-1">Current Request:</p>
     <ul class="pl-2">
       <li v-if="requests[0]">
@@ -37,6 +37,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.resizable {
+  resize: both;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.w-210 {
+  width: 210px;
+  min-width: 176px;
+  height: auto;
+}
+
 .chroma {
   background-color: #00b140;
   color: #FDD017;
