@@ -8,6 +8,10 @@ import store from './store'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+import Icon from 'vue-awesome/components/Icon'
+
+Vue.component('Icon', Icon)
+
 Vue.use(BootstrapVue)
 Vue.config.productionTip = false
 

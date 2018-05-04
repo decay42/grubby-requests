@@ -44,17 +44,12 @@
 <script>
 import { mapMutations, mapGetters } from 'vuex'
 
-import Icon from 'vue-awesome/components/Icon'
-
 import 'vue-awesome/icons/plus'
 import 'vue-awesome/icons/step-forward'
 import 'vue-awesome/icons/sync-alt'
 
 export default {
   name: 'Interface',
-  components: {
-    Icon
-  },
   data () {
     return {
       request: null,
@@ -91,7 +86,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

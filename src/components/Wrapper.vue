@@ -44,16 +44,13 @@
 import Interface from './Interface'
 import StreamOverlay from './StreamOverlay'
 
-import Icon from 'vue-awesome/components/Icon'
-
 import 'vue-awesome/icons/brands/github'
 
 export default {
   name: 'Wrapper',
   components: {
     Interface,
-    StreamOverlay,
-    Icon
+    StreamOverlay
   }
 }
 </script>
