@@ -50,21 +50,34 @@ import 'vue-awesome/icons/sync-alt'
 
 export default {
   name: 'Interface',
-  data () {
-    return {
-      request: null,
-      requester: null
-    }
-  },
   computed: {
     ...mapGetters([
       'requests'
-    ])
+    ]),
+    request: {
+      ...mapMutations({
+        set: 'setRequest'
+      }),
+
+      ...mapGetters({
+        get: 'request'
+      })
+    },
+    requester: {
+      ...mapMutations({
+        set: 'setRequester'
+      }),
+
+      ...mapGetters({
+        get: 'requester'
+      })
+    }
   },
   methods: {
     ...mapMutations([
       'addRequest',
-      'nextRequest'
+      'nextRequest',
+      'clearRequests'
     ]),
 
     _addRequest () {
@@ -72,15 +85,11 @@ export default {
         request: this.request,
         requester: this.requester
       })
-      this.request = null
-      this.requester = null
     },
 
     resetRequests () {
       if (confirm('Are you sure you want to clear all requests currently in the queue?')) {
-        while (this.requests.length) {
-          this.nextRequest()
-        }
+        this.clearRequests()
       }
     }
   }

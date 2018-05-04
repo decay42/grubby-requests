@@ -6,28 +6,14 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     requests: JSON.parse(localStorage.getItem('requestQueue')) || [],
+    request: null,
+    requester: null,
     id: 0
   },
   getters: {
-    requests: state => state.requests
-    // dummy data in case it's needed
-    // [{
-    //   'id': 1,
-    //   'requester': 'kwilson0',
-    //   'request': 'convallis morbi odio odio '
-    // }, {
-    //   'id': 2,
-    //   'requester': 'rghiotto1',
-    //   'request': 'ipsum primis in faucibus orci luctus'
-    // }, {
-    //   'id': 3,
-    //   'requester': 'cgoodboddy2',
-    //   'request': 'primis in faucibus dapibus dolor vel est donec odio justo sollicitudin ut'
-    // }, {
-    //   'id': 4,
-    //   'requester': 'djendrach3',
-    //   'request': 'rutrum nulla tellus'
-    // }]
+    requests: state => state.requests,
+    request: state => state.request,
+    requester: state => state.requester
   },
   mutations: {
     addRequest (state, request) {
@@ -35,10 +21,25 @@ export default new Vuex.Store({
       state.id++
       state.requests.push(request)
       localStorage.setItem('requestQueue', JSON.stringify(state.requests))
+      state.request = ''
+      state.requester = ''
     },
     nextRequest (state) {
       state.requests = state.requests.length > 1 ? state.requests.slice(1) : []
       localStorage.setItem('requestQueue', JSON.stringify(state.requests))
+    },
+    clearRequests (state) {
+      state.requests = []
+      state.request = ''
+      state.requester = ''
+      state.id = 0
+      localStorage.removeItem('requestQueue')
+    },
+    setRequest (state, request) {
+      state.request = request
+    },
+    setRequester (state, requester) {
+      state.requester = requester
     }
   }
 })

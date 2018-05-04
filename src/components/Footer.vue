@@ -1,5 +1,5 @@
 <template>
-  <div class="footer m-4 py-4 small border-top border-gray-light text-muted">
+  <div class="footer my-4 mx-auto py-4 small border-top border-gray-light text-muted">
     <div class="position-relative d-flex justify-content-between">
       <ul class="nav d-flex flex-wrap">
         <li>&copy; 2018 decay42</li>
@@ -43,6 +43,10 @@ export default {
 </script>
 
 <style lang="scss">
+.footer {
+  max-width: 1000px;
+}
+
 .nav li:not(:last-child) {
   margin-right: 1rem;
 }
