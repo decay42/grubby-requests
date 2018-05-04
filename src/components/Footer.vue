@@ -14,23 +14,23 @@
       <ul class="nav d-flex flex-wrap">
         <li>
           <a v-b-modal.helpModal href="#">Help</a>
-          <b-modal
-             ok-only
-             id="helpModal" 
-             title="Help">
-            <p>
-              You can resize the green box with the little handle in the lower right corner of the box.
-            </p>
-            <p>
-              The requests are saved in the browser's localStorage, so they will still be available after closing the tab/window. If you want to clear the queue, use the "Reset" button.
-            </p>
-            <p>
-              If you have any problems or suggestions, feel free to create an issue on the GitHub repo.
-            </p>
-          </b-modal>
         </li>
       </ul>
     </div>
+    <b-modal
+       ok-only
+       id="helpModal" 
+       title="Help">
+      <p>
+        You can resize the green box with the little handle in the lower right corner of the box.
+      </p>
+      <p>
+        The requests are saved in the browser's localStorage, so they will still be available after closing the tab/window. If you want to clear the queue, use the "Reset" button.
+      </p>
+      <p>
+        If you have any problems or suggestions, feel free to create an issue on the GitHub repo.
+      </p>
+    </b-modal>
   </div>
 </template>
 
@@ -56,6 +56,10 @@ export default {
 
   &:hover {
     color: #959da5;
+  }
+
+  &:active {
+    color: #f08812
   }
 }
 </style>
