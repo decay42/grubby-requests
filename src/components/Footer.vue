@@ -1,6 +1,6 @@
 <template>
-  <div class="footer my-4 mx-auto py-4 small border-top border-gray-light text-muted">
-    <div class="position-relative d-flex justify-content-between">
+  <div class="footer my-4 mx-auto py-4 px-1 border-top border-gray-light">
+    <div class="small text-muted position-relative d-flex justify-content-between">
       <ul class="nav d-flex flex-wrap">
         <li>&copy; 2018 decay42</li>
       </ul>
@@ -25,6 +25,10 @@
         You can resize the green box with the little handle in the lower right corner of the box.
       </p>
       <p>
+        Use "Color Key" filter in OBS rather than "Chroma Key".<br>
+        Check <a href="https://i.imgur.com/iASK7OM.png" target="_blank">this image <icon name="external-link-alt" scale="0.7"/></a> for settings that I have tested myself and found to work quite well.
+      </p>
+      <p>
         The requests are saved in the browser's localStorage, so they will still be available after closing the tab/window. If you want to clear the queue, use the "Reset" button.
       </p>
       <p>
@@ -36,6 +40,7 @@
 
 <script>
 import 'vue-awesome/icons/brands/github'
+import 'vue-awesome/icons/external-link-alt'
 
 export default {
   name: 'Footer'
