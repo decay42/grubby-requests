@@ -1,5 +1,5 @@
 <template>
-  <div class="chroma p-2 w-210 resizable">
+  <div class="chroma p-2 w-210 resizable friz">
     <p class="mb-1">Current Request:</p>
     <ul class="pl-2">
       <li v-if="requests[0]">
@@ -37,6 +37,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@font-face {
+  font-family: 'Friz Quadrata';
+  src: url('../assets/Friz Quadrata Std Medium.otf') format('opentype')
+}
+
 .resizable {
   resize: both;
   overflow: auto;
@@ -49,11 +54,20 @@ export default {
   height: auto;
 }
 
+.friz {
+  font-family: 'Friz Quadrata';
+  font-size: 110%;
+  font-weight: normal !important;
+}
+
 .chroma {
   background-color: #00b140;
   color: #FDD017;
   font-weight: bold;
-  text-shadow: #000 0 0 1px, #000 0 0 1px, #000 0 0 1px, #000 0 0 1px, #000 0 0 1px;
+  text-shadow: #000 0 0 1px, #000 0 0 1px, 
+               #000 0 0 1px, #000 0 0 1px, 
+               #000 0 0 1px, #000 0 0 1px, 
+               #000 0 0 1px, #000 0 0 1px;
   -webkit-font-smoothing: antialiased;
 }
 
