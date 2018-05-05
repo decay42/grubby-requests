@@ -3,7 +3,7 @@
     <p class="mb-1">Current Request:</p>
     <ul class="pl-2">
       <li v-if="requests[0]">
-        <i>{{ requests[0].requester || 'Anonymous' }}</i>: {{ requests[0].request }}
+        <i>{{ requests[0].requester || 'Anonymous' }}:</i> {{ requests[0].request }}
       </li>
       <li v-else>
         Currently no requests
@@ -13,7 +13,7 @@
     <ul class="pl-2">
       <div v-if="requests[1]">
         <li v-for="request in requests.slice(1)" :key="request.id">
-          <i>{{ request.requester || 'Anonymous' }}</i>: {{ request.request }}
+          <i>{{ request.requester || 'Anonymous' }}:</i> {{ request.request }}
         </li>
       </div>
       <div v-else>
@@ -39,7 +39,7 @@ export default {
 <style scoped lang="scss">
 @font-face {
   font-family: 'Friz Quadrata';
-  src: url('../assets/Friz Quadrata Std Medium.otf') format('opentype')
+  src: url('../assets/FrizQuadrataStd.otf') format('opentype')
 }
 
 .resizable {
@@ -62,7 +62,7 @@ export default {
 
 .chroma {
   background-color: #00b140;
-  color: #FDD017;
+  color: #f5b633;//#FDD017;
   font-weight: bold;
   text-shadow: #000 0 0 1px, #000 0 0 1px, 
                #000 0 0 1px, #000 0 0 1px, 
