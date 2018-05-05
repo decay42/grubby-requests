@@ -27,7 +27,7 @@
           variant="success"
           @click="nextRequest"
           title="Drop the current request and move the first upcoming request up into Current Request">
-          <icon name="step-forward"></icon>Next Request
+          <icon name="forward"></icon>Next Request
         </b-btn>
 
         <b-btn
@@ -45,7 +45,7 @@
 import { mapMutations, mapGetters } from 'vuex'
 
 import 'vue-awesome/icons/plus'
-import 'vue-awesome/icons/step-forward'
+import 'vue-awesome/icons/forward'
 import 'vue-awesome/icons/sync-alt'
 
 export default {
