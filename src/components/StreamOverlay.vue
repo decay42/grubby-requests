@@ -1,6 +1,6 @@
 <template>
   <div class="chroma p-2 w-210 resizable friz">
-    <p class="mb-1">Current Request:</p>
+    <p class="mb-1">Current !request:</p>
     <ul class="pl-2">
       <li v-if="requests[0]">
         <i>{{ requests[0].requester || 'Anonymous' }}:</i> {{ requests[0].request }}
@@ -9,7 +9,7 @@
         Currently no requests
       </li>
     </ul>
-    <p class="mb-1">Upcoming Requests:</p>
+    <p class="mb-1">Upcoming requests:</p>
     <ul class="pl-2">
       <div v-if="requests[1]">
         <li v-for="request in requests.slice(1)" :key="request.id">
@@ -44,14 +44,14 @@ export default {
 
 .resizable {
   resize: both;
-  overflow: auto;
+  overflow: hidden;
   padding: 1rem;
 }
 
 .w-210 {
-  width: 210px;
+  width: 257px;
   min-width: 176px;
-  height: auto;
+  height: 433px;
 }
 
 .friz {
